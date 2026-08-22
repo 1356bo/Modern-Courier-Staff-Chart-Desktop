@@ -1,0 +1,21 @@
+{
+  "name": "modern-courier-staff-chart-desktop",
+  "version": "1.0.0",
+  "description": "Offline Modern Courier Service Staff Chart",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "in.moderncourier.staffchart",
+    "productName": "Modern Courier Staff Chart",
+    "asar": true,
+    "files": ["main.js", "preload.js", "index.html", "renderer.js", "styles.css"],
+    "win": { "target": "portable", "artifactName": "Modern_Courier_Staff_Chart.exe" }
+  }
+}
